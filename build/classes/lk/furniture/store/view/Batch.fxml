@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="590.0" prefWidth="809.0" style="-fx-background-color: #FFFF;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXButton layoutX="325.0" layoutY="500.0" prefHeight="60.0" prefWidth="193.0" style="-fx-background-color: #5DADE2;" text="NEW BATCH" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXTreeTableView layoutX="48.0" layoutY="142.0" prefHeight="325.0" prefWidth="708.0">
+         <columns>
+            <TreeTableColumn prefWidth="99.0" text="BatchID" />
+            <TreeTableColumn prefWidth="160.0" text="Supplier Name" />
+            <TreeTableColumn prefWidth="126.0" text="Date" />
+            <TreeTableColumn prefWidth="140.0" text="Quantity" />
+            <TreeTableColumn prefWidth="182.0" text="Price" />
+         </columns>
+      </JFXTreeTableView>
+      <Separator layoutX="37.0" layoutY="64.0" prefHeight="25.0" prefWidth="749.0" />
+      <Label layoutX="49.0" layoutY="12.0" prefHeight="52.0" prefWidth="159.0" text="Stock Maintain &gt;" textFill="#a49e9e">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="208.0" layoutY="12.0" prefHeight="52.0" prefWidth="213.0" text="Furniture Batch" textFill="#2f2d2d">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

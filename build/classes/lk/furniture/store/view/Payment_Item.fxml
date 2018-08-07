@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="itemPane" prefHeight="768.0" prefWidth="1198.0" style="-fx-background-color: #FFFF;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <stylesheets>
+      <URL value="@/lk/furniture/store/style/payment_item.css" />
+   </stylesheets>
+   <children>
+      <JFXTextField fx:id="txtOID" focusColor="#5dade2" labelFloat="true" layoutX="244.0" layoutY="161.0" prefHeight="34.0" prefWidth="116.0" promptText="Order ID" unFocusColor="#909497" />
+      <JFXTextField fx:id="txtFurtype" focusColor="#5dade2" labelFloat="true" layoutX="213.0" layoutY="234.0" prefHeight="34.0" prefWidth="153.0" promptText="Furniture Type" unFocusColor="#909497" />
+      <JFXComboBox fx:id="CBFID" editable="true" focusColor="#5dade2" labelFloat="true" layoutX="600.0" layoutY="161.0" onAction="#fillFurnitureItemDetails" prefHeight="34.0" prefWidth="153.0" promptText="Furniture Code" unFocusColor="#909497" />
+      <JFXTextField fx:id="txtPrice" focusColor="#5dade2" labelFloat="true" layoutX="721.0" layoutY="234.0" prefHeight="34.0" prefWidth="116.0" promptText="Price" unFocusColor="#909497" />
+      <JFXTextField fx:id="txtCurrentDate" focusColor="#5dade2" labelFloat="true" layoutX="429.0" layoutY="161.0" prefHeight="34.0" prefWidth="116.0" promptText="Date" unFocusColor="#909497" />
+      <JFXButton fx:id="btnOrder" layoutX="964.0" layoutY="298.0" onAction="#addtemToTable" prefHeight="40.0" prefWidth="97.0" ripplerFill="WHITE" style="-fx-background-color: #52BE80;" styleClass="box-shadow" stylesheets="@../style/Login.css" text=" Order" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/C:/Users/djlak/Documents/NetBeansProjects/FX/FurnitureStore/src/images/list.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblOrder" layoutX="139.0" layoutY="365.0" prefHeight="157.0" prefWidth="892.0">
+         <columns>
+            <TableColumn prefWidth="112.0" text="Furniture Code" />
+            <TableColumn prefWidth="153.0" text="Name" />
+            <TableColumn prefWidth="135.0" text="Furniture Type" />
+            <TableColumn prefWidth="164.0" text="Wood Type" />
+            <TableColumn prefWidth="106.0" text="Qty" />
+            <TableColumn prefWidth="71.0" text="Color" />
+            <TableColumn prefWidth="150.0" text="Price" />
+         </columns>
+      </TableView>
+      <Label alignment="CENTER" layoutX="361.0" layoutY="34.0" prefHeight="61.0" prefWidth="235.0" styleClass="setup-button" stylesheets="@../style/Login.css" text="ITEM" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Separator layoutX="141.0" layoutY="103.0" prefHeight="3.0" prefWidth="346.0" />
+      <JFXTextField fx:id="txtColor" focusColor="#5dade2" labelFloat="true" layoutX="878.0" layoutY="234.0" prefHeight="34.0" prefWidth="116.0" promptText="Color" unFocusColor="#909497" />
+      <JFXTextField fx:id="txtFurName" focusColor="#5dade2" labelFloat="true" layoutX="800.0" layoutY="161.0" prefHeight="34.0" prefWidth="164.0" promptText="Furniture Name" unFocusColor="#909497" />
+      <Label alignment="CENTER" layoutX="129.0" layoutY="34.0" prefHeight="61.0" prefWidth="235.0" styleClass="setup-button" stylesheets="@../style/Login.css" text="CUSTOMER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="596.0" layoutY="34.0" prefHeight="61.0" prefWidth="235.0" style="-fx-background-color: #909497;" text="CONFIRM &amp; PAY" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="831.0" layoutY="34.0" prefHeight="61.0" prefWidth="235.0" style="-fx-background-color: #909497;" text="SUMMERY" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnItemNext" layoutX="1026.0" layoutY="585.0" onAction="#loadComfirmPayOnNext" prefHeight="34.0" prefWidth="87.0" styleClass="setup-button" stylesheets="@../style/Login.css" text="NEXT" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnItemCancel" cancelButton="true" layoutX="905.0" layoutY="585.0" onAction="#loadustomerOnCancel" prefHeight="34.0" prefWidth="87.0" styleClass="setup-button" stylesheets="@../style/Login.css" text="CANCEL" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtWoodType" focusColor="#5dade2" labelFloat="true" layoutX="392.0" layoutY="234.0" prefHeight="34.0" prefWidth="153.0" promptText="Wood Type" unFocusColor="#909497" />
+      <JFXButton fx:id="btnRemove" layoutX="842.0" layoutY="298.0" onAction="#removeItemFromTable" prefHeight="40.0" prefWidth="107.0" style="-fx-background-color: #D80027;" styleClass="box-shadow" stylesheets="@../style/Login.css" text="Remove" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/remove-round-button.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="lblRefresh" alignment="CENTER" layoutX="992.0" layoutY="105.0" onMouseClicked="#RefreshAllFields" prefHeight="40.0" prefWidth="64.0">
+         <tooltip>
+            <Tooltip text="refresh fields" />
+         </tooltip>
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/refresh-page-option.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <JFXTextField fx:id="txtQty" focusColor="#5dade2" labelFloat="true" layoutX="575.0" layoutY="234.0" prefHeight="34.0" prefWidth="116.0" promptText="Quantity" unFocusColor="#909497" />
+      <Label layoutX="264.0" layoutY="541.0" prefHeight="40.0" prefWidth="153.0" text="Availble Quantity at Store ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="88.0" fitWidth="87.0" layoutX="162.0" layoutY="541.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/store%20(1).png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="lblQty" alignment="CENTER" focusColor="#5dade2" labelFloat="true" layoutX="283.0" layoutY="581.0" prefHeight="34.0" prefWidth="116.0" unFocusColor="#909497">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </JFXTextField>
+   </children>
+</AnchorPane>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="customrPane" prefHeight="768.0" prefWidth="1198.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.furniture.store.controller.Payment_CustommerController">
+   <children>
+      <JFXTextField fx:id="txtContact" focusColor="#5dade2" labelFloat="true" layoutX="308.0" layoutY="274.0" prefHeight="34.0" prefWidth="235.0" promptText="Contact Number" unFocusColor="#646668" />
+      <JFXTextField fx:id="txtCID" focusColor="#5dade2" labelFloat="true" layoutX="647.0" layoutY="274.0" prefHeight="34.0" prefWidth="116.0" promptText="Customer ID" unFocusColor="#646668" />
+      <JFXTextArea fx:id="txtAddress" focusColor="#5dade2" labelFloat="true" layoutX="308.0" layoutY="493.0" prefHeight="76.0" prefWidth="235.0" promptText="Delivery Address" unFocusColor="#646668" />
+      <Separator layoutX="129.0" layoutY="106.0" prefHeight="4.0" prefWidth="235.0" />
+      <JFXButton fx:id="btnNext" focusTraversable="false" layoutX="1026.0" layoutY="585.0" onAction="#loadItemOnNext" prefHeight="34.0" prefWidth="87.0" styleClass="setup-button" stylesheets="@../style/Login.css" text="NEXT" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Label alignment="CENTER" layoutX="129.0" layoutY="34.0" prefHeight="61.0" prefWidth="235.0" styleClass="setup-button" stylesheets="@../style/Login.css" text="CUSTOMER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="364.0" layoutY="34.0" prefHeight="61.0" prefWidth="235.0" style="-fx-background-color: #909497;" text="ITEM" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="599.0" layoutY="34.0" prefHeight="61.0" prefWidth="235.0" style="-fx-background-color: #909497;" text="CONFIRM &amp; PAY" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="834.0" layoutY="34.0" prefHeight="61.0" prefWidth="235.0" style="-fx-background-color: #909497;" text="SUMMERY" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtFName" focusColor="#5dade2" labelFloat="true" layoutX="308.0" layoutY="384.0" prefHeight="34.0" prefWidth="235.0" promptText="First Name" />
+      <JFXTextField fx:id="txtLName" focusColor="#5dade2" labelFloat="true" layoutX="647.0" layoutY="384.0" prefHeight="34.0" prefWidth="235.0" promptText="Last Name" />
+      <JFXTextField fx:id="txtDistrict" focusColor="#5dade2" labelFloat="true" layoutX="647.0" layoutY="493.0" prefHeight="34.0" prefWidth="235.0" promptText="District" />
+      <JFXButton fx:id="btnAddCustomer" contentDisplay="TOP" layoutX="945.0" layoutY="175.0" onAction="#loadAddCustomer" prefHeight="48.0" prefWidth="212.0" styleClass="setup-button" stylesheets="@../style/Login.css" text="ADD CUSTOMER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="36.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/add-contact.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

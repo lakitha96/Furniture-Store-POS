@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="768.0" prefWidth="1198.0" style="-fx-background-color: #FFFF;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.furniture.store.controller.FurnitureStockController">
+   <children>
+      <JFXButton fx:id="btnEdit" layoutX="889.0" layoutY="585.0" onAction="#editFurniture" prefHeight="39.0" prefWidth="106.0" styleClass="setup-button" stylesheets="@../style/Login.css" text="EDIT" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnNew" layoutX="899.0" layoutY="210.0" onAction="#loadNewFurniture" prefHeight="60.0" prefWidth="193.0" styleClass="setup-button" stylesheets="@../style/Login.css" text="ADD NEW FURNITURE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/armchair-silhouette.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label alignment="CENTER" layoutX="100.0" layoutY="14.0" prefHeight="52.0" prefWidth="162.0" text="Furniture Stock" textFill="#2f2d2d">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Separator layoutX="23.0" layoutY="57.0" prefHeight="14.0" prefWidth="866.0" />
+      <JFXButton fx:id="btnDelete" layoutX="1026.0" layoutY="585.0" onAction="#deleteFurniture" prefHeight="39.0" prefWidth="106.0" styleClass="setup-button" stylesheets="@../style/Login.css" text="DELETE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="100.0" layoutY="181.0" prefHeight="35.0" prefWidth="106.0" text="Furniture Type" />
+      <JFXTextField fx:id="txtFType" focusColor="#5dade2" layoutX="206.0" layoutY="186.0" prefHeight="25.0" prefWidth="150.0" />
+      <Label layoutX="434.0" layoutY="186.0" prefHeight="25.0" prefWidth="94.0" text="Wood Type" />
+      <JFXTextField fx:id="txtWType" focusColor="#5dade2" layoutX="538.0" layoutY="186.0" prefHeight="25.0" prefWidth="174.0" />
+      <Label layoutX="100.0" layoutY="120.0" prefHeight="35.0" prefWidth="106.0" text="Furniture ID" />
+      <JFXTextField fx:id="txtFID" focusColor="#5dade2" layoutX="206.0" layoutY="125.0" prefHeight="25.0" prefWidth="150.0" />
+      <Label layoutX="438.0" layoutY="120.0" prefHeight="35.0" prefWidth="86.0" text="Name" />
+      <JFXTextField fx:id="txtName" focusColor="#5dade2" layoutX="535.0" layoutY="125.0" prefHeight="25.0" prefWidth="174.0" />
+      <Label layoutX="100.0" layoutY="240.0" prefHeight="35.0" prefWidth="106.0" text="Quantity" />
+      <JFXTextField fx:id="txtQuantity" focusColor="#5dade2" layoutX="206.0" layoutY="245.0" prefHeight="25.0" prefWidth="76.0" />
+      <Label layoutX="438.0" layoutY="245.0" prefHeight="25.0" prefWidth="55.0" text="Price" />
+      <JFXTextField fx:id="txtPrice" focusColor="#5dade2" layoutX="537.0" layoutY="245.0" prefHeight="25.0" prefWidth="125.0" />
+      <Label layoutX="804.0" layoutY="120.0" prefHeight="35.0" prefWidth="86.0" text="Color" />
+      <TableView fx:id="tblFurnitureItem" layoutX="172.0" layoutY="340.0" prefHeight="198.0" prefWidth="856.0">
+        <columns>
+          <TableColumn prefWidth="85.00003051757812" text="Furniture ID" />
+          <TableColumn prefWidth="128.0" text="Name" />
+            <TableColumn prefWidth="128.0" text="Furniture Type" />
+            <TableColumn prefWidth="128.0" text="Wood Type" />
+            <TableColumn prefWidth="128.0" text="Color" />
+            <TableColumn prefWidth="128.0" text="Quantity" />
+            <TableColumn prefWidth="128.0" text="Price" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="46.0" fitWidth="55.0" layoutX="34.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/factory-stock-house%20(2).png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtSearchByName" focusColor="#5dade2" layoutX="127.0" layoutY="592.0" prefHeight="25.0" prefWidth="184.0" promptText="Search by Furniture Name" />
+      <JFXTextField fx:id="txtSearchByPrice" focusColor="#5dade2" layoutX="360.0" layoutY="592.0" prefHeight="25.0" prefWidth="184.0" promptText="Search by Price" />
+      <JFXTextField fx:id="txtSearchByWoodType" focusColor="#5dade2" layoutX="577.0" layoutY="592.0" prefHeight="25.0" prefWidth="184.0" promptText="Search by Wood Type" />
+      <Label fx:id="lblRefresh" alignment="CENTER" layoutX="892.0" layoutY="38.0" onMouseClicked="#RefreshAllFields" prefHeight="52.0" prefWidth="86.0">
+         <graphic>
+            <ImageView fitHeight="39.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/refresh-page-option.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <tooltip>
+            <Tooltip text="refresh fields" />
+         </tooltip>
+      </Label>
+      <JFXTextField fx:id="txtColor" focusColor="#5dade2" layoutX="901.0" layoutY="125.0" prefHeight="25.0" prefWidth="125.0" />
+   </children>
+</AnchorPane>

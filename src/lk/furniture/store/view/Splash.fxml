@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="rootPane" prefHeight="302.0" prefWidth="487.0" style="-fx-background-color: #FFFF;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.furniture.store.controller.SplashController">
+   <children>
+      <ImageView fitHeight="259.0" fitWidth="346.0" layoutX="71.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/WF-BLACK-login.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="47.0" fitWidth="53.0" layoutX="221.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/loading.gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="861.0" prefWidth="1366.0" style="-fx-background-color: #FFFFFF;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.furniture.store.controller.DashboardController">
+    <stylesheets>
+        <URL value="@/lk/furniture/store/style/dashboard.css" />
+    </stylesheets>
+   <children>
+      <VBox layoutY="93.0" prefHeight="768.0" prefWidth="167.0" style="-fx-background-color: #393636;">
+         <children>
+            <JFXButton fx:id="btnPayment" contentDisplay="TOP" focusTraversable="false" graphicTextGap="8.0" onAction="#loadPayment" prefHeight="54.0" prefWidth="167.0" stylesheets="@../style/dashboard.css" text="Payment" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/give-money%20(3).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <styleClass>
+                  <String fx:value="setup-button" />
+                  <String fx:value="button-Active" />
+               </styleClass>
+            </JFXButton>
+            <JFXButton fx:id="Customers" contentDisplay="TOP" focusTraversable="false" graphicTextGap="8.0" onAction="#loadManageCustomers" prefHeight="56.0" prefWidth="206.0" styleClass="setup-button" stylesheets="@../style/dashboard.css" text="Customers" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/crowd-of-users.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnFurnitureStock" contentDisplay="TOP" focusTraversable="false" graphicTextGap="8.0" onAction="#loadFurnitureStock" prefHeight="56.0" prefWidth="206.0" styleClass="setup-button" stylesheets="@../style/dashboard.css" text="Furniture Stock" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/factory-stock-house%20(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnSupplier" contentDisplay="TOP" focusTraversable="false" graphicTextGap="8.0" onAction="#loadSupplier" prefHeight="56.0" prefWidth="206.0" styleClass="setup-button" stylesheets="@../style/dashboard.css" text="Supplier" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/forklift-with-boxes.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnDelivery" contentDisplay="TOP" focusTraversable="false" graphicTextGap="8.0" onAction="#loadDelivery" prefHeight="56.0" prefWidth="206.0" styleClass="setup-button" stylesheets="@../style/dashboard.css" text="Delivery" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="42.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/delivery-van%20(4).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnGRN" contentDisplay="TOP" focusTraversable="false" graphicTextGap="8.0" onAction="#loadGRN" prefHeight="56.0" prefWidth="206.0" styleClass="setup-button" stylesheets="@../style/dashboard.css" text="GRN" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="37.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/notepad.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnPurchaseOrder" contentDisplay="TOP" focusTraversable="false" graphicTextGap="8.0" onAction="#loadPurchaseOrder" prefHeight="56.0" prefWidth="206.0" styleClass="setup-button" stylesheets="@../style/dashboard.css" text="Purchase Order" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/choices.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </VBox>
+      <AnchorPane prefHeight="93.0" prefWidth="1371.0" style="-fx-background-color: #393636;">
+         <children>
+            <ImageView fitHeight="102.0" fitWidth="162.0" layoutX="669.0" layoutY="-15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/WF-WHITE-180px.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="logout" fitHeight="36.0" fitWidth="29.0" layoutX="1287.0" layoutY="15.0" onMouseClicked="#loadLogin" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logout%20(1).png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER_RIGHT" layoutY="29.0" prefHeight="36.0" prefWidth="206.0" text="DASHBOARD" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font name="Roboto" size="17.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/four-squares-with-frame-shape%20(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets right="50.0" />
+               </padding>
+            </Label>
+            <ImageView fx:id="btnClose" fitHeight="29.0" fitWidth="22.0" layoutX="1330.0" layoutY="18.0" onMouseClicked="#systemExit" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/cancel.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblDate" alignment="CENTER" layoutX="175.0" layoutY="33.0" prefHeight="29.0" prefWidth="105.0" text="2017-01-01" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Separator layoutX="163.0" layoutY="17.0" orientation="VERTICAL" prefHeight="61.0" prefWidth="5.0" />
+            <ImageView fx:id="btnSetting" fitHeight="29.0" fitWidth="29.0" layoutX="1239.0" layoutY="15.0" onMouseClicked="#applicationSettings" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/nut-icon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="rootPane" layoutX="168.0" layoutY="93.0" prefHeight="768.0" prefWidth="1198.0">
+         <children>
+            <AnchorPane id="AnchorPane" fx:id="summaryPane" prefHeight="768.0" prefWidth="1198.0" style="-fx-background-color: #FFFF;" styleClass="mainFxmlClass">
+               <stylesheets>
+                  <URL value="@/lk/furniture/store/style/payment_customer.css" />
+               </stylesheets>
+               <children>
+                  <Label layoutX="232.0" layoutY="248.0" prefHeight="31.0" prefWidth="105.0" text="Customer Name" />
+                  <Label fx:id="lblSumCustomerName" layoutX="337.0" layoutY="248.0" prefHeight="31.0" prefWidth="186.0" style="-fx-background-color: #F2F4F4;" />
+                  <Label layoutX="232.0" layoutY="295.0" prefHeight="31.0" prefWidth="105.0" text="Contact Number" />
+                  <Label fx:id="lblSumConNumber" layoutX="337.0" layoutY="295.0" prefHeight="31.0" prefWidth="186.0" style="-fx-background-color: #F2F4F4;" />
+                  <Label layoutX="232.0" layoutY="344.0" prefHeight="31.0" prefWidth="105.0" text="Delivery Address" />
+                  <AnchorPane layoutX="689.0" layoutY="188.0" prefHeight="344.0" prefWidth="278.0" style="-fx-background-color: #F2F4F4;">
+                     <children>
+                        <JFXTextField fx:id="txtSumPayID" editable="false" focusColor="#5dade2" labelFloat="true" layoutX="14.0" layoutY="14.0" prefHeight="34.0" prefWidth="116.0" promptText="Payment ID" />
+                        <JFXTextArea fx:id="txtSumPurchasedFurniture" editable="false" labelFloat="true" layoutX="14.0" layoutY="131.0" prefHeight="121.0" prefWidth="186.0" promptText="Purchased Furnitures" />
+                        <Label layoutX="20.0" layoutY="290.0" prefHeight="31.0" prefWidth="105.0" text="TOTAL">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblSumTotal" alignment="CENTER_RIGHT" layoutX="107.0" layoutY="285.0" prefHeight="40.0" prefWidth="148.0" text="105000.00">
+                           <font>
+                              <Font name="System Bold" size="28.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="txtSumDate" editable="false" focusColor="#5dade2" labelFloat="true" layoutX="14.0" layoutY="68.0" prefHeight="34.0" prefWidth="157.0" promptText="Date" />
+                     </children>
+                  </AnchorPane>
+                  <Separator layoutX="585.0" layoutY="188.0" orientation="VERTICAL" prefHeight="304.0" prefWidth="14.0" />
+                  <JFXButton fx:id="btmDone" layoutX="1026.0" layoutY="585.0" onAction="#loadCustomerOnDone" prefHeight="34.0" prefWidth="87.0" styleClass="setup-button" stylesheets="@../style/Login.css" text="DONE" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <Label alignment="CENTER" layoutX="834.0" layoutY="34.0" prefHeight="61.0" prefWidth="235.0" styleClass="setup-button" stylesheets="@../style/Login.css" text="SUMMERY" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="141.0" layoutY="103.0" prefHeight="2.0" prefWidth="818.0" />
+                  <Label alignment="CENTER" layoutX="364.0" layoutY="34.0" prefHeight="61.0" prefWidth="235.0" styleClass="setup-button" stylesheets="@../style/Login.css" text="ITEM" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="599.0" layoutY="34.0" prefHeight="61.0" prefWidth="235.0" styleClass="setup-button" stylesheets="@../style/Login.css" text="DELIVERY" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="129.0" layoutY="34.0" prefHeight="61.0" prefWidth="235.0" styleClass="setup-button" stylesheets="@../style/Login.css" text="CUSTOMER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblSumAddress" layoutX="337.0" layoutY="345.0" prefHeight="93.0" prefWidth="186.0" style="-fx-background-color: #F2F4F4;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane id="AnchorPane" fx:id="deliveryPane" prefHeight="768.0" prefWidth="1198.0" style="-fx-background-color: #FFFF;" styleClass="mainFxmlClass">
+               <stylesheets>
+                  <URL value="@/lk/furniture/store/style/payment_customer.css" />
+               </stylesheets>
+               <children>
+                  <Label layoutX="189.0" layoutY="275.0" prefHeight="31.0" prefWidth="105.0" text="Customer Name" />
+                  <Label layoutX="189.0" layoutY="322.0" prefHeight="31.0" prefWidth="105.0" text="Contact Number" />
+                  <Label layoutX="189.0" layoutY="371.0" prefHeight="31.0" prefWidth="105.0" text="Delivery Address" />
+                  <JFXTextArea fx:id="txtDeliveryAddress" focusColor="#5dade2" focusTraversable="false" layoutX="294.0" layoutY="378.0" prefHeight="57.0" prefWidth="186.0" />
+                  <Label layoutX="625.0" layoutY="275.0" prefHeight="31.0" prefWidth="105.0" text="Payment ID" />
+                  <Label layoutX="625.0" layoutY="322.0" prefHeight="31.0" prefWidth="105.0" text="Date" />
+                  <Label layoutX="625.0" layoutY="372.0" prefHeight="31.0" prefWidth="105.0" text="Delivery Code" />
+                  <JFXTextField fx:id="txtDeliveryID" focusColor="#5dade2" layoutX="730.0" layoutY="370.0" prefHeight="34.0" prefWidth="186.0" unFocusColor="#0a0a0a" />
+                  <AnchorPane layoutX="169.0" layoutY="504.0" prefHeight="74.0" prefWidth="263.0" />
+                  <JFXDatePicker fx:id="dpDeliveryDate" defaultColor="#25a3dd" layoutX="730.0" layoutY="423.0" prefHeight="25.0" prefWidth="215.0" />
+                  <Label layoutX="625.0" layoutY="420.0" prefHeight="31.0" prefWidth="105.0" text="Delivery Date" />
+                  <JFXButton fx:id="btnNext1" layoutX="1026.0" layoutY="585.0" onAction="#loadSummaryOnNext" prefHeight="34.0" prefWidth="87.0" styleClass="setup-button" stylesheets="@../style/Login.css" text="NEXT" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnCancel" cancelButton="true" layoutX="788.0" layoutY="585.0" onAction="#loadCustomerOnCancel" prefHeight="34.0" prefWidth="87.0" styleClass="setup-button" stylesheets="@../style/Login.css" text="CANCEL" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnBack" cancelButton="true" layoutX="909.0" layoutY="585.0" onAction="#loadItemOnBack" prefHeight="34.0" prefWidth="87.0" styleClass="setup-button" stylesheets="@../style/Login.css" text="BACK" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <Label alignment="CENTER" layoutX="364.0" layoutY="34.0" prefHeight="61.0" prefWidth="235.0" styleClass="setup-button" stylesheets="@../style/Login.css" text="ITEM" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="599.0" layoutY="34.0" prefHeight="61.0" prefWidth="235.0" styleClass="setup-button" stylesheets="@../style/Login.css" text="DELIVERY" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="827.0" layoutY="34.0" prefHeight="61.0" prefWidth="235.0" style="-fx-background-color: #909497;" text="SUMMERY" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="141.0" layoutY="103.0" prefHeight="3.0" prefWidth="597.0" />
+                  <Label alignment="CENTER" layoutX="129.0" layoutY="34.0" prefHeight="61.0" prefWidth="235.0" styleClass="setup-button" stylesheets="@../style/Login.css" text="CUSTOMER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtDeliveryCustomerContact" focusColor="#5dade2" layoutX="294.0" layoutY="323.0" prefHeight="29.0" prefWidth="186.0" unFocusColor="#0a0a0a" />
+                  <JFXTextField fx:id="txtDeliveryCustomerName" focusColor="#5dade2" layoutX="294.0" layoutY="276.0" prefHeight="29.0" prefWidth="186.0" unFocusColor="#0a0a0a" />
+                  <JFXTextField fx:id="txtPayDate" focusColor="#5dade2" layoutX="730.0" layoutY="323.0" prefHeight="29.0" prefWidth="186.0" unFocusColor="#0a0a0a" />
+                  <JFXTextField fx:id="txtPayPID" focusColor="#5dade2" layoutX="730.0" layoutY="276.0" prefHeight="29.0" prefWidth="186.0" unFocusColor="#0a0a0a" />
+               </children>
+            </AnchorPane>
+            <AnchorPane id="AnchorPane" fx:id="customrPane" prefHeight="768.0" prefWidth="1198.0">
+               <children>
+                  <JFXTextField fx:id="txtContact" focusColor="#5dade2" labelFloat="true" layoutX="308.0" layoutY="274.0" onAction="#loadCustomerDetailsOnActionContact" prefHeight="34.0" prefWidth="235.0" promptText="Contact Number" unFocusColor="#646668" />
+                  <JFXTextField fx:id="txtCID" focusColor="#5dade2" labelFloat="true" layoutX="647.0" layoutY="274.0" onAction="#fillCustomerDetails" prefHeight="34.0" prefWidth="116.0" promptText="Customer ID" unFocusColor="#646668" />
+                  <JFXTextArea fx:id="txtAddress" focusColor="#5dade2" labelFloat="true" layoutX="308.0" layoutY="493.0" prefHeight="76.0" prefWidth="235.0" promptText="Delivery Address" unFocusColor="#646668" />
+                  <Separator layoutX="129.0" layoutY="106.0" prefHeight="4.0" prefWidth="235.0" />
+                  <JFXButton fx:id="btnNext" focusTraversable="false" layoutX="1026.0" layoutY="585.0" onAction="#loadItemOnNext" prefHeight="34.0" prefWidth="87.0" styleClass="setup-button" stylesheets="@../style/Login.css" text="NEXT" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <Label alignment="CENTER" layoutX="129.0" layoutY="34.0" prefHeight="61.0" prefWidth="235.0" styleClass="setup-button" stylesheets="@../style/Login.css" text="CUSTOMER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="364.0" layoutY="34.0" prefHeight="61.0" prefWidth="235.0" style="-fx-background-color: #909497;" text="ITEM" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="599.0" layoutY="34.0" prefHeight="61.0" prefWidth="235.0" style="-fx-background-color: #909497;" text="CONFIRM &amp; PAY" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="834.0" layoutY="34.0" prefHeight="61.0" prefWidth="235.0" style="-fx-background-color: #909497;" text="SUMMERY" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtFName" focusColor="#5dade2" labelFloat="true" layoutX="308.0" layoutY="384.0" prefHeight="34.0" prefWidth="235.0" promptText="First Name" />
+                  <JFXTextField fx:id="txtLName" focusColor="#5dade2" labelFloat="true" layoutX="647.0" layoutY="384.0" prefHeight="34.0" prefWidth="235.0" promptText="Last Name" />
+                  <JFXTextField fx:id="txtDistrict" focusColor="#5dade2" labelFloat="true" layoutX="647.0" layoutY="493.0" prefHeight="34.0" prefWidth="235.0" promptText="District" />
+                  <JFXButton fx:id="btnAddCustomer" contentDisplay="TOP" layoutX="945.0" layoutY="175.0" onAction="#loadAddCustomer" prefHeight="48.0" prefWidth="212.0" styleClass="setup-button" stylesheets="@../style/Login.css" text="ADD CUSTOMER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/add-contact.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane id="AnchorPane" fx:id="itemPane" prefHeight="768.0" prefWidth="1198.0" style="-fx-background-color: #FFFF;" styleClass="mainFxmlClass">
+               <stylesheets>
+                  <URL value="@/lk/furniture/store/style/payment_item.css" />
+               </stylesheets>
+               <children>
+                  <JFXTextField fx:id="txtOID" focusColor="#5dade2" labelFloat="true" layoutX="295.0" layoutY="167.0" prefHeight="34.0" prefWidth="116.0" promptText="Order ID" unFocusColor="#909497" />
+                  <JFXTextField fx:id="txtFurtype" focusColor="#5dade2" labelFloat="true" layoutX="213.0" layoutY="234.0" prefHeight="34.0" prefWidth="153.0" promptText="Furniture Type" unFocusColor="#909497" />
+                  <JFXComboBox fx:id="CBFID" editable="true" focusColor="#5dade2" labelFloat="true" layoutX="651.0" layoutY="167.0" onAction="#fillFurnitureItemDetails" prefHeight="34.0" prefWidth="153.0" promptText="Furniture Code" unFocusColor="#909497" />
+                  <JFXTextField fx:id="txtPrice" focusColor="#5dade2" labelFloat="true" layoutX="721.0" layoutY="234.0" prefHeight="34.0" prefWidth="116.0" promptText="Price" unFocusColor="#909497" />
+                  <JFXTextField fx:id="txtCurrentDate" focusColor="#5dade2" labelFloat="true" layoutX="480.0" layoutY="167.0" prefHeight="34.0" prefWidth="116.0" promptText="Date" unFocusColor="#909497" />
+                  <JFXButton fx:id="btnOrder" layoutX="964.0" layoutY="298.0" onAction="#addtemToTable" prefHeight="40.0" prefWidth="97.0" ripplerFill="WHITE" style="-fx-background-color: #52BE80;" styleClass="box-shadow" stylesheets="@../style/Login.css" text=" Order" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/list.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <TableView fx:id="tblOrder" layoutX="139.0" layoutY="365.0" prefHeight="157.0" prefWidth="892.0">
+                     <columns>
+                        <TableColumn prefWidth="112.0" text="Furniture Code" />
+                        <TableColumn prefWidth="153.0" text="Name" />
+                        <TableColumn prefWidth="135.0" text="Furniture Type" />
+                        <TableColumn prefWidth="164.0" text="Wood Type" />
+                        <TableColumn prefWidth="81.0" text="Qty" />
+                        <TableColumn prefWidth="96.0" text="Color" />
+                        <TableColumn prefWidth="150.0" text="Price" />
+                     </columns>
+                  </TableView>
+                  <Label alignment="CENTER" layoutX="361.0" layoutY="34.0" prefHeight="61.0" prefWidth="235.0" styleClass="setup-button" stylesheets="@../style/Login.css" text="ITEM" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="141.0" layoutY="103.0" prefHeight="3.0" prefWidth="346.0" />
+                  <JFXTextField fx:id="txtColor" focusColor="#5dade2" labelFloat="true" layoutX="878.0" layoutY="234.0" prefHeight="34.0" prefWidth="116.0" promptText="Color" unFocusColor="#909497" />
+                  <JFXTextField fx:id="txtFurName" focusColor="#5dade2" labelFloat="true" layoutX="851.0" layoutY="167.0" prefHeight="34.0" prefWidth="164.0" promptText="Furniture Name" unFocusColor="#909497" />
+                  <Label alignment="CENTER" layoutX="129.0" layoutY="34.0" prefHeight="61.0" prefWidth="235.0" styleClass="setup-button" stylesheets="@../style/Login.css" text="CUSTOMER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="596.0" layoutY="34.0" prefHeight="61.0" prefWidth="235.0" style="-fx-background-color: #909497;" text="DELIVERY" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="831.0" layoutY="34.0" prefHeight="61.0" prefWidth="235.0" style="-fx-background-color: #909497;" text="SUMMERY" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="btnDeliverNext" layoutX="1026.0" layoutY="585.0" onAction="#loadDeliveryOnNext" prefHeight="34.0" prefWidth="87.0" styleClass="setup-button" stylesheets="@../style/Login.css" text="NEXT" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnItemCancel" cancelButton="true" layoutX="905.0" layoutY="585.0" onAction="#loadustomerOnCancel" prefHeight="34.0" prefWidth="87.0" styleClass="setup-button" stylesheets="@../style/Login.css" text="CANCEL" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXTextField fx:id="txtWoodType" focusColor="#5dade2" labelFloat="true" layoutX="392.0" layoutY="234.0" prefHeight="34.0" prefWidth="153.0" promptText="Wood Type" unFocusColor="#909497" />
+                  <JFXButton fx:id="btnRemove" layoutX="1049.0" layoutY="384.0" onAction="#removeItemFromTable" prefHeight="40.0" prefWidth="64.0" styleClass="box-shadow" stylesheets="@../style/Login.css" text="Remove" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/rubbish-bin%20(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <Label fx:id="lblRefresh" alignment="CENTER" layoutX="992.0" layoutY="105.0" onMouseClicked="#RefreshAllFields" prefHeight="40.0" prefWidth="64.0">
+                     <tooltip>
+                        <Tooltip text="refresh fields" />
+                     </tooltip>
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/refresh-page-option.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <JFXTextField fx:id="txtQty" focusColor="#5dade2" labelFloat="true" layoutX="575.0" layoutY="234.0" prefHeight="34.0" prefWidth="116.0" promptText="Quantity" unFocusColor="#909497" />
+                  <JFXTextField fx:id="txtPayBalance" focusColor="#5dade2" labelFloat="true" layoutX="626.0" layoutY="588.0" prefHeight="29.0" prefWidth="186.0" promptText="Balance (LKR)" unFocusColor="#0a0a0a" />
+                  <JFXTextField fx:id="txtPayCash" focusColor="#5dade2" labelFloat="true" layoutX="381.0" layoutY="588.0" onAction="#loadBalanceOnAction" prefHeight="29.0" prefWidth="186.0" promptText="Cash (LKR)" unFocusColor="#0a0a0a" />
+                  <Label fx:id="lblGetTotal" alignment="CENTER" contentDisplay="TOP" layoutX="133.0" layoutY="556.0" onMouseClicked="#loadTotalAmount" prefHeight="93.0" prefWidth="186.0" stylesheets="@../style/Login.css" text="TOTAL AMOUNT" textFill="WHITE">
+                     <styleClass>
+                        <String fx:value="box-shadow" />
+                        <String fx:value="setup-button" />
+                     </styleClass>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtMainPay" focusColor="#5dade2" labelFloat="true" layoutX="135.0" layoutY="167.0" prefHeight="34.0" prefWidth="116.0" promptText="Payment ID" unFocusColor="#909497" />
+                  <ImageView fitHeight="28.0" fitWidth="25.0" layoutX="806.0" layoutY="302.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/remove-round-button.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="dashboardMainPane" prefHeight="768.0" prefWidth="1198.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="846.0" fitWidth="1326.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/pattern-(3)_1.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="407.0" fitWidth="524.0" layoutX="291.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/WF-BLACK-login.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.furniture.store.controller.ManageCustomerController">
+    <stylesheets>
+        <URL value="@/lk/furniture/store/style/managecustomer.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane prefHeight="590.0" prefWidth="809.0" style="-fx-background-color: #FFFF;">
+         <children>
+            <JFXButton layoutX="458.0" layoutY="503.0" prefHeight="60.0" prefWidth="193.0" style="-fx-background-color: #5DADE2;" text="MANAGE CUSTOMER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="188.0" layoutY="503.0" prefHeight="60.0" prefWidth="193.0" style="-fx-background-color: #5DADE2;" text="ADD CUSTOMER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXTreeTableView layoutX="48.0" layoutY="142.0" prefHeight="325.0" prefWidth="708.0">
+               <columns>
+                  <TreeTableColumn prefWidth="99.0" text="Customer ID" />
+                  <TreeTableColumn prefWidth="154.0" text="Name" />
+                  <TreeTableColumn prefWidth="132.0" text="Contact Number" />
+                  <TreeTableColumn prefWidth="208.0" text="Address" />
+                  <TreeTableColumn prefWidth="114.0" text="City" />
+               </columns>
+            </JFXTreeTableView>
+            <Label layoutX="56.0" layoutY="22.0" prefHeight="52.0" prefWidth="193.0" text="Manage  Customer  " textFill="#2f2d2d">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Separator layoutX="37.0" layoutY="64.0" prefHeight="25.0" prefWidth="749.0" />
+   </children>
+</AnchorPane>

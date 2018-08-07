@@ -1,0 +1,21 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    
+
+}
+
+.setup-button{
+    -fx-background-color:  #2E86C1;
+    
+}
+
+.setup-button:hover{
+    -fx-background-color: #5DADE2;
+}
+
+.box-shadow:hover{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 0);
+}

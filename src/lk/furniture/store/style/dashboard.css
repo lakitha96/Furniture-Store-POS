@@ -1,0 +1,21 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+
+    
+    
+.setup-button :hover,
+.setup-button:pressed
+{
+  
+    -fx-background-color: #2E86C1;
+    font-size: 18px;
+}
+
+
+

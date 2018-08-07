@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="summaryPane" prefHeight="768.0" prefWidth="1198.0" style="-fx-background-color: #FFFF;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.furniture.store.controller.SummaryController">
+   <stylesheets>
+      <URL value="@/lk/furniture/store/style/payment_customer.css" />
+   </stylesheets>
+   <children>
+      <Label layoutX="232.0" layoutY="248.0" prefHeight="31.0" prefWidth="105.0" text="Customer Name" />
+      <Label fx:id="lblSumCustomerName" layoutX="337.0" layoutY="248.0" prefHeight="31.0" prefWidth="186.0" style="-fx-background-color: #F2F4F4;" />
+      <Label layoutX="232.0" layoutY="295.0" prefHeight="31.0" prefWidth="105.0" text="Contact Number" />
+      <Label fx:id="lblSumConNumber" layoutX="337.0" layoutY="295.0" prefHeight="31.0" prefWidth="186.0" style="-fx-background-color: #F2F4F4;" />
+      <Label layoutX="232.0" layoutY="344.0" prefHeight="31.0" prefWidth="105.0" text="Delivery Address" />
+      <AnchorPane layoutX="689.0" layoutY="188.0" prefHeight="344.0" prefWidth="278.0" style="-fx-background-color: #F2F4F4;">
+         <children>
+            <JFXTextField fx:id="txtSumPayID" editable="false" focusColor="#5dade2" labelFloat="true" layoutX="14.0" layoutY="14.0" prefHeight="34.0" prefWidth="116.0" promptText="Payment ID" />
+            <JFXTextArea fx:id="txtSumPurchasedFurniture" editable="false" labelFloat="true" layoutX="14.0" layoutY="131.0" prefHeight="121.0" prefWidth="186.0" promptText="Purchased Furnitures" />
+            <Label layoutX="20.0" layoutY="290.0" prefHeight="31.0" prefWidth="105.0" text="TOTAL">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblSumTotal" alignment="CENTER_RIGHT" layoutX="107.0" layoutY="285.0" prefHeight="40.0" prefWidth="148.0" text="0.00">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtSumDate" editable="false" focusColor="#5dade2" labelFloat="true" layoutX="14.0" layoutY="68.0" prefHeight="34.0" prefWidth="157.0" promptText="Date" />
+         </children>
+      </AnchorPane>
+      <Separator layoutX="585.0" layoutY="188.0" orientation="VERTICAL" prefHeight="304.0" prefWidth="14.0" />
+      <JFXButton fx:id="btmDone" layoutX="1026.0" layoutY="585.0" onAction="#loadCustomerOnDone" prefHeight="34.0" prefWidth="87.0" styleClass="setup-button" stylesheets="@../style/Login.css" text="DONE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Label alignment="CENTER" layoutX="834.0" layoutY="34.0" prefHeight="61.0" prefWidth="235.0" styleClass="setup-button" stylesheets="@../style/Login.css" text="SUMMERY" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Separator layoutX="141.0" layoutY="103.0" prefHeight="2.0" prefWidth="818.0" />
+      <Label alignment="CENTER" layoutX="364.0" layoutY="34.0" prefHeight="61.0" prefWidth="235.0" styleClass="setup-button" stylesheets="@../style/Login.css" text="ITEM" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="599.0" layoutY="34.0" prefHeight="61.0" prefWidth="235.0" styleClass="setup-button" stylesheets="@../style/Login.css" text="DELIVERY" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="129.0" layoutY="34.0" prefHeight="61.0" prefWidth="235.0" styleClass="setup-button" stylesheets="@../style/Login.css" text="CUSTOMER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblSumAddress" layoutX="337.0" layoutY="345.0" prefHeight="93.0" prefWidth="186.0" style="-fx-background-color: #F2F4F4;" />
+   </children>
+</AnchorPane>

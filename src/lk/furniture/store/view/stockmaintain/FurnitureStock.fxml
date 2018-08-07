@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="590.0" prefWidth="809.0" style="-fx-background-color: #FFFF;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXButton layoutX="458.0" layoutY="503.0" prefHeight="60.0" prefWidth="193.0" style="-fx-background-color: #5DADE2;" text="MANAGE STOCK" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="188.0" layoutY="503.0" prefHeight="60.0" prefWidth="193.0" style="-fx-background-color: #5DADE2;" text="NEW FURNITURE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="52.0" prefWidth="224.0" text="Furniture Stock" textFill="#2f2d2d">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <JFXTreeTableView layoutX="48.0" layoutY="142.0" prefHeight="325.0" prefWidth="708.0">
+         <columns>
+            <TreeTableColumn prefWidth="99.0" text="Furniture ID" />
+            <TreeTableColumn prefWidth="160.0" text="Name" />
+            <TreeTableColumn prefWidth="126.0" text="Furniture Type" />
+            <TreeTableColumn prefWidth="140.0" text="Wood Type" />
+            <TreeTableColumn prefWidth="182.0" text="Quantity Availble" />
+         </columns>
+      </JFXTreeTableView>
+      <Separator layoutX="23.0" layoutY="57.0" prefHeight="14.0" prefWidth="755.0" />
+   </children>
+</AnchorPane>
